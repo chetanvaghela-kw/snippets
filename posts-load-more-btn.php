@@ -207,7 +207,7 @@ function custom_load_more_posts_callback() {
 			ob_start();
 			$get_post_img = get_template_directory_uri() . '/assets/images/placeholder/placeholder.webp';
 			while ( $query->have_posts() ) {
-				$get_post_query->the_post();
+				$query->the_post();
 				$get_blog_id = get_the_ID();
 				$post_categories = get_the_terms( $get_blog_id, 'CATEGORY_SLUG' );	// UPDATE A SLUG OF CATEGORY FOR POST TYPE		
 				?>
